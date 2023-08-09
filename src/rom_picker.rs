@@ -168,7 +168,7 @@ For more detailed steps :)",
         let file_system = FileSystem::get();
 
         // Find files ending with '.gb' and push them into games
-        let files = file_system.listfiles(".")?;
+        let files = file_system.listfiles(".", false)?;
         for filename in files {
             // On FAT32 filesystems, macOS' Finder creates duplicates of every
             // file with the prefix "._" to track things like journaling.
